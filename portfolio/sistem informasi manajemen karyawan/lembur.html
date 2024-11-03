@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="script.js"></script>
+</head>
+
+<body class="bg-gray-100">
+    <div class="flex min-h-screen">
+        <div class="w-64 bg-white min-h-screen shadow-md flex flex-col justify-between" id="sidebar">
+            <div>
+                <div class="p-4 flex items-center">
+                    <img alt="University Logo" class="w-10 h-10 mr-2" height="50"
+                         src="Unpam.png" width="50" />
+                    <div >
+                        <h1 class="text-lg font-bold">UNIVERSITAS PAMULANG</h1>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <div class="flex items-center mb-4">
+                        <img alt="User  Avatar" class="w-10 h-10 rounded-full mr-2" height="50"
+                             src="profil 2.jpg" width="50" />
+                        <div>
+                            <p class="font-semibold">Welcome, Novriyansah Ramadhan Alfiqri </p>
+                            <p class="text-sm text-gray-500">Administrator</p>
+                        </div>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li class="mb-2">
+                                <a id="dashboardMenu" class="menu-item flex items-center p-2 text-gray-700 hover:bg-gray-200 rounded"
+                                href="dashboard.html" onclick="showPage('dashboardPage', 'dashboardMenu'); event.preventDefault();">
+
+                                    <i class="fas fa-tachometer-alt mr-2"></i>
+                                    Dashboard
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="font-semibold text-gray-700 mt-4 mb-2">MENU KARYAWAN</p>
+                        <ul>
+                            <li class="mb-2">
+                                <a id="karyawanMenu" class="menu-item flex items-center p-2 text-gray-700 hover:bg-gray-200 rounded"
+                                   href="karyawan.html" onclick="showPage('karyawanPage', 'karyawanMenu')">
+                                    <i class="fas fa-users mr-2"></i>
+                                    Karyawan
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a id="jabatanMenu" class="menu-item flex items-center p-2 text-gray-700 hover:bg-gray-200 rounded"
+                                   href="jabatan.html" onclick="showPage('jabatanPage', 'jabatanMenu')">
+                                    <i class="fas fa-briefcase mr-2"></i>
+                                    Jabatan
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a id="divisiMenu" class="menu-item flex items-center p-2 text-gray-700 hover:bg-gray-200 rounded"
+                                   href="divisi.html" onclick="showPage('divisiPage', 'divisiMenu')">
+                                    <i class="fas fa-building mr-2"></i>
+                                    Divisi
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="font-semibold text-gray-700 mt-4 mb-2">MENU ABSENSI</p>
+                        <ul>
+                            <li class="mb-2">
+
+                                <a id="absensiMenu" class="menu-item flex items-center p-2 text-gray-700 hover:bg-gray-200 rounded"
+                            
+                                   href="absen.html" onclick="showPage('absensiPage', 'absensiMenu'); event.preventDefault();">
+                            
+                                    <i class="fas fa-calendar mr-2"></i>
+                                    Absensi
+                            
+                                </a>
+                            
+                            </li>
+                            <li class="mb-2">
+                                <a id="izinMenu" class="menu-item flex items-center p-2 text-gray-700 hover:bg-gray-200 rounded"
+                                   href="izin.html"onclick="showPage('daftarIzinPage', 'izinMenu'); event.preventDefault();">
+                                    <i class="fas fa-calendar mr-2"></i>
+                                    Izin
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a id="lemburMenu" class="menu-item flex items-center p-2 text-gray-700 hover:bg-gray-200 rounded"
+                                href="lembur.html"onclick="showPage('daftarLemburPage', 'lemburMenu'); event.preventDefault();">
+
+                                    <i class="fas fa-calendar mr-2"></i>
+                                    Lembur
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="font-semibold text-gray-700 mt-4 mb-2">MENU PENGGAJIAN</p>
+                        <ul>
+                            <li class="mb-2">
+
+                                <a id="absensiMenu" class="menu-item flex items-center p-2 text-gray-700 hover:bg-gray-200 rounded"
+                            
+                                   href="absen.html" onclick="showPage('absensiPage', 'absensiMenu'); event.preventDefault();">
+                            
+                                    <i class="fas fa-calendar mr-2"></i>
+                                    Slip Gaji
+                            
+                                </a>
+                            
+                            </li>
+                            <li class="mb-2">
+                                <a id="izinMenu" class="menu-item flex items-center p-2 text-gray-700 hover:bg-gray-200 rounded"
+                                   href="izin.html"onclick="showPage('daftarIzinPage', 'izinMenu'); event.preventDefault();">
+                                    <i class="fas fa-calendar mr-2"></i>
+                                    Cetak Slip Gaji
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="font-semibold text-gray-700 mt-4 mb-2">MENU LAPORAN</p>
+                        <ul>
+                            <li class="mb-2">
+
+                                <a id="absensiMenu" class="menu-item flex items-center p-2 text-gray-700 hover:bg-gray-200 rounded"
+                            
+                                   href="absen.html" onclick="showPage('absensiPage', 'absensiMenu'); event.preventDefault();">
+                            
+                                    <i class="fas fa-calendar mr-2"></i>
+                                    Cetak Laporan
+                                </a>
+                        </ul>
+                        <p class="font-semibold text-gray-700 mt-4 mb-2">MENU ADMIN</p>
+                        <ul>
+                            <li class="mb-2">
+
+                                <a id="absensiMenu" class="menu-item flex items-center p-2 text-gray-700 hover:bg-gray-200 rounded"
+                            
+                                   href="absen.html" onclick="showPage('absensiPage', 'absensiMenu'); event.preventDefault();">
+                            
+                                    <i class="fas fa-calendar mr-2"></i>
+                                    Pengguna
+                            
+                                </a>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="p-4">
+                <button class="w-full bg-red-500 text-white p-2 rounded">
+                    <i class="fas fa-sign-out-alt mr-2"></i>
+                    Logout
+                </button>
+            </div>
+        </div>
+    
+        <div class="flex-1">
+            <div class="bg-slate-700 text-white p-4 flex justify-between items-center">
+                <button class="bg-sky-900 text-white p-2 rounded" onclick="toggleSidebar()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="flex items-center">
+                    <p class="mr-4">Welcome, Novriyansah Ramadhan Alfiqri</p>
+                    <img alt="User Avatar" class="w-10 h-10 rounded-full" height="50"
+                         src="profil 2.jpg" width="50" />
+                </div>
+            </div>
+            
+            <div id="dashboardPage" class="page p-6">
+                <div class="bg-slate-700 text-white p-6 rounded-lg shadow-md mb-6">
+                    <h1 class="">Sistem Informasi Manajemen Karyawan</h1>
+                    <p class="text-lg">Admin Dashboard</p>
+                </div>
+
+                    
+              </div>
+              
+
+            <div id="karyawanPage" class="page p-6 ">
+                <div class="bg-slate-700 text-white p-6 rounded-lg shadow-md mb-6">
+                    <h1 class="text-2xl font-bold">Daftar Lembur Karyawan</h1>
+                    <a href="tambah.html">Tambah Karyawan</a>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white shadow-md rounded">
+                        <thead>
+                            <tr>
+                                <th class="py-2 px-4 bg-sky-900 text-white font-semibold">No</th>
+                                <th class="py-2 px-4 bg-sky-900 text-white font-semibold">Nama</th>
+                                <th class="py-2 px-4 bg-sky-900 text-white font-semibold">Tanggal</th>
+                                <th class="py-2 px-4 bg-sky-900 text-white font-semibold">Jam Lembur mulai | akhir</th>
+                                <th class="py-2 px-4 bg-sky-900 text-white font-semibold">keperluan</th>
+                                <th class="py-2 px-4 bg-sky-900 text-white font-semibold">Status</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2 px-4 border">1</td>
+                                <td class="py-2 px-4 border">bernadya</td>
+                                <td class="py-2 px-4 border">10-09-2024</td>
+                                <td class="py-2 px-4 border">08.20-19.00</td>
+                                <td class="py-2 px-4 border">rapat</td>
+                                <td class="py-2 px-4 border"><div class="flex gap-5 justify-center"><button><i class="fas fa-check"></i></button></div></td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border">2</td>
+                                <td class="py-2 px-4 border">idris</td>
+                                <td class="py-2 px-4 border">10-09-2024</td>
+                                <td class="py-2 px-4 border">11.20-20.00</td>
+                                <td class="py-2 px-4 border">berkas</td>
+                                <td class="py-2 px-4 border"><div class="flex gap-5 justify-center"><button><i class="fas fa-clock"></i></button></div></td>
+                            <tr>
+                                <td class="py-2 px-4 border">3</td>
+                                <td class="py-2 px-4 border">clara</td>
+                                <td class="py-2 px-4 border">20-01-2024</td>
+                                <td class="py-2 px-4 border">11.20-21.00</td>
+                                <td class="py-2 px-4 border">koreksi</td>
+                                <td class="py-2 px-4 border"><div class="flex gap-5 justify-center"><button><i class="fas fa-clock"></i></button></div></td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border">4</td>
+                                <td class="py-2 px-4 border">ninda</td>
+                                <td class="py-2 px-4 border">13-11-2024</td>
+                                <td class="py-2 px-4 border">12.20-22.00</td>
+                                <td class="py-2 px-4 border">rapat</td>
+                                <td class="py-2 px-4 border"><div class="flex gap-5 justify-center"><button><i class="fas fa-check"></i></button></div></td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border">5</td>
+                                <td class="py-2 px-4 border">lina</td>
+                                <td class="py-2 px-4 border">23-12-2024</td>
+                                <td class="py-2 px-4 border">07.20-20.20</td>
+                                <td class="py-2 px-4 border">akreditasi</td>
+                                <td class="py-2 px-4 border"><div class="flex gap-5 justify-center"><button><i class="fas fa-check"></i></button></div></td>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            </body>
+            </html>
